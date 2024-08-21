@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const dropdowns = Array.from(document.querySelectorAll(".dropdown-btn"));
 
 dropdowns.forEach((dropdown) => {
@@ -24,3 +25,14 @@ document.addEventListener("click", function(event) {
     }
   });
 });
+=======
+function snackbar() {
+  //  Debut du Code
+    const snackbar = document.getElementById("snackbar");
+    snackbar.classList.add("animation")
+
+    setTimeout(function() {
+      snackbar.classList.remove("animation")
+    }, 3000);  
+}
+>>>>>>> cdc899e (first commit)
