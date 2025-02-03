@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+// Gestion des menus déroulants
 const dropdowns = Array.from(document.querySelectorAll(".dropdown-btn"));
 
 dropdowns.forEach((dropdown) => {
@@ -11,12 +11,14 @@ dropdowns.forEach((dropdown) => {
   });
 });
 
+// Fermer le menu déroulant lorsqu'on clique sur un lien à l'intérieur
 document.querySelectorAll(".dropdown-container a").forEach(link => {
   link.addEventListener("click", function() {
     this.closest('.dropdown-container').style.display = "none";
   });
 });
 
+// Fermer le menu déroulant lorsqu'on clique à l'extérieur
 document.addEventListener("click", function(event) {
   dropdowns.forEach((dropdown) => {
     const dropdownContainer = dropdown.nextElementSibling;
@@ -25,14 +27,13 @@ document.addEventListener("click", function(event) {
     }
   });
 });
-=======
-function snackbar() {
-  //  Debut du Code
-    const snackbar = document.getElementById("snackbar");
-    snackbar.classList.add("animation")
 
-    setTimeout(function() {
-      snackbar.classList.remove("animation")
-    }, 3000);  
+// Gestion du snackbar
+function snackbar() {
+  const snackbar = document.getElementById("snackbar");
+  snackbar.classList.add("animation");
+
+  setTimeout(function() {
+    snackbar.classList.remove("animation");
+  }, 3000);
 }
->>>>>>> cdc899e (first commit)

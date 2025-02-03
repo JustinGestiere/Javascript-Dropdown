@@ -2,6 +2,7 @@
   --color-black: #242024;
   --color-gray-100: #a3a1a3;
   --color-blue: #3888c1;
+  --color-white: #ffffff;
 
   --font-family: "Nunito", sans-serif;
 
@@ -15,19 +16,25 @@
   --space-xl: 32px;
   --space-xxl: 40px;
 }
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
 body {
   padding: 0 100px;
   font-family: var(--font-family);
 }
+
 h1 {
   font-weight: var(--font-bold);
   text-align: center;
   padding: var(--space-xl) 0;
   font-size: var(--font-xl);
 }
+
 .sidenav {
   height: 100%;
   width: 200px;
@@ -39,9 +46,10 @@ h1 {
   overflow-x: hidden;
   padding-top: var(--space-xxl);
 }
+
 .sidenav a,
 .dropdown-btn {
-  padding: var(--space-xs) var(--space-sm) var(--space-xs) var(--space-sm);
+  padding: var(--space-xs) var(--space-sm);
   text-decoration: none;
   font-size: 20px;
   color: var(--color-gray-100);
@@ -53,46 +61,49 @@ h1 {
   cursor: pointer;
   outline: none;
 }
+
 .sidenav a:hover,
 .dropdown-btn:hover {
-  color: white;
+  color: var(--color-white);
 }
+
 .main {
   margin-top: var(--space-xxl);
   margin-left: 200px;
   font-size: var(--font-lg);
   padding: 0px var(--space-sm);
 }
+
 .active {
   background-color: var(--color-blue);
-  color: white;
+  color: var(--color-white);
 }
+
 .dropdown-container {
   display: none;
   background-color: var(--color-black);
   padding-left: var(--space-sm);
 }
+
 .fa-caret-down {
   float: right;
   padding-right: var(--space-sm);
 }
-<<<<<<< HEAD
-=======
-/* Code */
+
+/* Snackbar */
 #snackbar {
   position: fixed;
-  bottom: 0;
-  left: 40%;
-  right: 40%;
-  background-color: rgb(49, 49, 49);
-  color: white;
-  padding: 10px;
-  margin-bottom: 25px;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 12px 20px;
   border-radius: 5px;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
-#snackbar.animation{
+
+#snackbar.animation {
   opacity: 1;
 }
->>>>>>> cdc899e (first commit)
